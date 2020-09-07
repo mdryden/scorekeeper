@@ -1,0 +1,65 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Dart Format Check",
+            "type": "shell",
+            "command": "dartfmt lib -n --set-exit-if-changed",
+            "group": "build",
+            "problemMatcher": [
+                "$dart-pub-build_runner"
+            ]
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "flutter run",
+            "group": "build",
+            "problemMatcher": [
+                "$dart-pub-build_runner"
+            ]
+        },
+        {
+            "label": "build_runner watch",
+            "type": "shell",
+            "command": "flutter pub run build_runner watch",
+            "group": "build",
+            "problemMatcher": [
+                "$dart-pub-build_runner"
+            ]
+        },
+        {
+            "label": "build_runner build",
+            "type": "shell",
+            "command": "flutter pub run build_runner build",
+            "group": "build",
+            "problemMatcher": [
+                "$dart-pub-build_runner"
+            ]
+        },
+        {
+            "label": "build_runner build (delete conflicting)",
+            "type": "shell",
+            "command": "flutter pub run build_runner build --delete-conflicting-outputs",
+            "group": "build",
+            "problemMatcher": [
+                "$dart-pub-build_runner"
+            ]
+        },
+        {
+            "label": "build all",
+            "type": "shell",
+            "group": "build",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "build_runner build",
+                "flutter build web (dev)"
+            ],
+            "problemMatcher": [
+                "$dart-pub-build_runner"
+            ]
+        },
+    ]
+}

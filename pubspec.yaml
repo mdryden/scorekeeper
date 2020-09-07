@@ -19,10 +19,14 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
+  flutter: ^1.20.3
 
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^4.3.2+2
+  injectable: ^1.0.4
+  get_it: ^4.0.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -32,6 +36,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  injectable_generator:
+  build_runner:
+  analyzer: 0.39.14 # Added due to this bug in build_runner: https://github.com/flutter/flutter/issues/63556
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
